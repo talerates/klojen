@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Modak&display=swap" rel="stylesheet">
+  <title>Klojen Retro Design with Background Color Change</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Background Color Change */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family:"Modak", system-ui;
+		font-weight: 400;
+  font-style: normal;;
+      overflow: hidden;
+      animation: backgroundColorChange 1.5s infinite alternate;
+    }
+
+    /* Retro Text Styling */
+    .text {
+      font-size: 7rem;
+      color: #F3F3E0;
+      position: relative;
+      text-shadow: 
+        3px 3px 0px #247ba0,   /* Blue shadow */
+        6px 6px 0px #ffe066,   /* Yellow shadow */
+        9px 9px 0px #f25f5c, /* Red shadow */
+        12px 12px 0px #70c1b3; /* Teal shadow */
+      animation: float 0.5s ease-in-out infinite;
+    }
+
+    /* Background Color Change Animation */
+    @keyframes backgroundColorChange {
+      0% {
+        background-color: #D9D5C3;
+      }
+      25% {
+        background-color: #f25f5c;
+      }
+      50% {
+        background-color: #ffe066;
+      }
+      75% {
+        background-color: #247ba0;
+      }
+      100% {
+        background-color: #70c1b3;
+      }
+    }
+
+    /* Text Floating Animation */
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="text">KLOJEN</div>
+</body>
+</html>
